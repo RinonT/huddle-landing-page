@@ -13,6 +13,7 @@ header {
         }
     }
     .try-btn {
+        background-color: #ffffff;
         font-family: "Poppins", sans-serif;
         font-size: 16px;
         line-height: 23px;
@@ -24,5 +25,13 @@ header {
         -moz-border-radius: 50px;
         -ms-border-radius: 50px;
         -o-border-radius: 50px;
+    }
+}
+
+@media (min-width: 1114px) {
+    header {
+        .header__container {
+            padding: 32px 32px 0 32px;
+        }
     }
 }

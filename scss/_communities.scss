@@ -1,6 +1,6 @@
 @import "./mixins";
 $lightPinkColor: hsl(321, 100%, 78%);
-.communities__section__container {
+.communities_section__container {
     padding-top: 150px;
 }
 
@@ -10,7 +10,7 @@ $lightPinkColor: hsl(321, 100%, 78%);
     padding-bottom: 32px;
 }
 
-.communities__section__article {
+.communities_section__article {
     @include flex-column;
     text-align: center;
 }
@@ -38,6 +38,7 @@ $lightPinkColor: hsl(321, 100%, 78%);
     @include flex-column;
     align-items: center;
     padding-top: 200px;
+    padding-bottom: 50px;
     .communities__formed {
         padding-bottom: 100px;
     }
@@ -65,6 +66,7 @@ $lightPinkColor: hsl(321, 100%, 78%);
         width: 105%;
     }
     .communities__info {
+        padding-top: 100px;
         @include flex-row;
         .communities__formed {
             padding-bottom: 0;

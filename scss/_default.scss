@@ -5,7 +5,6 @@ body {
     font-style: normal;
     font-weight: normal;
     margin: 0;
-    padding: 6px;
 }
 
 ul {
@@ -14,6 +13,10 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 h1,
@@ -39,4 +42,8 @@ img {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+article {
+    text-align: center;
 }

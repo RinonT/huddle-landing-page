@@ -1,0 +1,65 @@
+@import './mixins';
+.growth_section__container,
+.conversations_section__container,
+.users_section__container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.growth_section__article,
+.conversations_section__article,
+.users_section__article {
+    padding-top: 75px;
+}
+
+@media (min-width: 500px) {
+    .growth_section__image_container,
+    .conversations_section__image_container,
+    .users_section__image_container {
+        @include flex-column;
+        align-items: center;
+        img {
+            max-width: 70%;
+        }
+    }
+}
+
+.building_community_section {
+    .building_community_section__container,
+    .communities__button_container {
+        @include flex-column;
+        text-align: center;
+        align-items: center;
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 1114px) {
+    .growth_section__container,
+    .users_section__container {
+        @include flex-row;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+    }
+    .conversations_section__container {
+        @include flex-row;
+        flex-wrap: nowrap;
+    }
+    .growth_section__image_container,
+    .conversations_section__image_container,
+    .users_section__image_container {
+        @include flex-row;
+        justify-content: flex-end;
+        img {
+            max-width: 70%;
+        }
+    }
+    .conversations_section__image_container {
+        justify-content: flex-start;
+    }
+    .growth_section__article,
+    .conversations_section__article,
+    .users_section__article {
+        max-width: 500px;
+    }
+}
