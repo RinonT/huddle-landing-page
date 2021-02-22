@@ -1,4 +1,18 @@
+@import './mixins';
+$pink: hsl(322, 100%, 66%);
 footer {
+    padding: 0 16px 0 16px;
+    .huddle_info {
+        .footer__heading {
+            svg {
+                margin-top: 16px;
+            }
+            .page__heading-text {
+                font-size: 24px;
+                line-height: 33px;
+            }
+        }
+    }
     .news_letter h2 {
         text-transform: uppercase;
     }
@@ -11,8 +25,60 @@ footer {
     }
     form {
         padding-bottom: 100px;
+        width: 100%;
+        label {
+            @include flex-column;
+            margin-bottom: 16px;
+        }
+        input {
+            padding: 32px;
+            // border: transparent;
+            outline: none;
+        }
+        input::placeholder {
+            color: #ffffff;
+        }
+        .footer__button_container {
+            @include flex-row;
+            justify-content: flex-end;
+        }
+        .subscribe_btn {
+            font-size: 18px;
+            font-weight: 600;
+            padding: 19px 48px 19px 48px;
+            background-color: $pink;
+            color: #ffffff;
+            border: transparent;
+        }
+        input,
+        .subscribe_btn {
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
         span {
             display: none;
+        }
+    }
+    .phone_contact {
+        margin-bottom: 32px;
+    }
+    .email_contact {
+        margin-bottom: 50px;
+    }
+    .social_media_contact {
+        @include flex-row;
+        justify-content: unset;
+        padding: 0;
+        padding-bottom: 32px;
+        li {
+            margin-left: 16px;
+            img {
+                width: 40px;
+                height: 40px;
+            }
         }
     }
 }
