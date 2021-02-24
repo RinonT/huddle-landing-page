@@ -148,6 +148,9 @@ header .try-btn {
   background-size: contain;
   padding-top: 28%; }
 
+.conversations_section {
+  padding-top: 70px; }
+
 .growth_section__container,
 .users_section__container {
   background-color: #f5faff; }
@@ -156,7 +159,7 @@ header .try-btn {
   content: "";
   display: block;
   width: 100%;
-  height: 100px;
+  height: 100%;
   background-image: url(../images/bg-section-bottom-mobile-1.svg);
   background-repeat: no-repeat;
   background-size: contain;
