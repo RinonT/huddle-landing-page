@@ -1,10 +1,36 @@
-@import './mixins';
+@import "./mixins";
 .growth_section__container,
 .conversations_section__container,
 .users_section__container {
     padding-top: 100px;
     padding-bottom: 50px;
+    position: relative;
 }
+
+.growth_section {
+    background-image: url(../images/bg-section-top-mobile-1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 28%;
+}
+
+.growth_section__container,
+.users_section__container {
+    background-color: hsl(207, 100%, 98%);
+}
+
+.growth_section::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-image: url(../images/bg-section-bottom-mobile-1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+}
+
 
 .growth_section__article,
 .conversations_section__article,
