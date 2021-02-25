@@ -1,17 +1,43 @@
 @import "./mixins";
-.growth_section__container,
-.conversations_section__container,
-.users_section__container {
-    padding-top: 100px;
-    padding-bottom: 50px;
-    position: relative;
-}
-
 .growth_section {
     background-image: url(../images/bg-section-top-mobile-1.svg);
     background-repeat: no-repeat;
     background-size: contain;
     padding-top: 28%;
+}
+
+.growth_section::after {
+    background-image: url(../images/bg-section-bottom-mobile-1.svg);
+}
+.growth_section::after,
+.users_section::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+}
+
+.users_section {
+    background-image: url(../images/bg-section-top-mobile-2.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 26%;
+}
+
+.users_section::after {
+    background-image: url(../images/bg-section-bottom-mobile-2.svg);
+}
+
+.growth_section__contents_container,
+.conversations_section__contents_container,
+.users_section__contents_container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
 }
 
 .conversations_section {
@@ -23,25 +49,12 @@
     background-color: hsl(207, 100%, 98%);
 }
 
-.growth_section::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/bg-section-bottom-mobile-1.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    left: 0; 
-}
-
-
 .growth_section__article,
 .conversations_section__article,
 .users_section__article {
     padding-top: 75px;
 }
-
+ 
 @media (min-width: 500px) {
     .growth_section__image_container,
     .conversations_section__image_container,
@@ -55,7 +68,9 @@
 }
 
 .building_community_section {
-    .building_community_section__container,
+    padding-top: 166px;
+    padding-bottom: 55px;
+    .building_community_section__contents_container,
     .communities__button_container {
         @include flex-column;
         text-align: center;
@@ -65,13 +80,34 @@
 }
 
 @media (min-width: 1114px) {
-    .growth_section__container,
-    .users_section__container {
+    .growth_section {
+        background-image: url(../images/bg-section-top-desktop-1.svg);
+        margin-top: 23px;
+        padding-top: 11%;
+    }
+    .growth_section::after {
+        background-image: url(../images/bg-section-bottom-desktop-1.svg);
+    }
+    .users_section {
+        background-image: url(../images/bg-section-top-desktop-2.svg);
+        padding-top: 10%;
+    }
+    .users_section::after {
+        background-image: url(../images/bg-section-bottom-desktop-2.svg);
+    }
+
+    .conversations_section {
+        padding-top: 130px;
+        padding-bottom: 50px;
+    }
+
+    .growth_section__contents_container,
+    .users_section__contents_container {
         @include flex-row;
         flex-direction: row-reverse;
         flex-wrap: nowrap;
     }
-    .conversations_section__container {
+    .conversations_section__contents_container {
         @include flex-row;
         flex-wrap: nowrap;
     }
@@ -92,4 +128,10 @@
     .users_section__article {
         max-width: 500px;
     }
+
+    
+.building_community_section {
+    padding-top: 200px;
+    padding-bottom: 0;
+}
 }
