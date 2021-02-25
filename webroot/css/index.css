@@ -279,7 +279,8 @@ footer {
     padding: 0 24px; }
   footer .footer__paragraph {
     margin-top: 32px;
-    margin-bottom: 32px; }
+    margin-bottom: 32px;
+    line-height: 33px; }
   footer form {
     width: 100%; }
     footer form label {
@@ -313,6 +314,8 @@ footer {
       -o-border-radius: 5px; }
     footer form span {
       display: none; }
+  footer .contact_container svg {
+    margin-right: 8px; }
   footer .phone_contact {
     margin-bottom: 32px; }
   footer .email_contact {
@@ -326,7 +329,45 @@ footer {
     padding: 0;
     padding-bottom: 32px; }
     footer .social_media_contact li {
-      margin-left: 16px; }
+      margin-right: 16px; }
       footer .social_media_contact li img {
-        width: 40px;
-        height: 40px; }
+        width: 30px;
+        height: 30px; }
+  @media (min-width: 1114px) {
+    footer {
+      background-image: url(../images/bg-footer-top-desktop.svg);
+      padding: 11% 0 0 0; }
+      footer .footer_contents_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap; }
+        footer .footer_contents_container article {
+          padding: 0; }
+        footer .footer_contents_container .news_letter {
+          flex-basis: 50%; }
+          footer .footer_contents_container .news_letter .footer__paragraph {
+            margin-top: 39px; }
+        footer .footer_contents_container .huddle_info {
+          flex-basis: 50%; }
+          footer .footer_contents_container .huddle_info .footer__heading .page__heading-text {
+            font-size: 48px;
+            line-height: 59px; }
+      footer .news_letter h2 {
+        line-height: 59px; }
+      footer .footer__paragraph {
+        width: 380px;
+        margin-top: 39px; }
+      footer .footer__paragraph {
+        width: 380px; }
+      footer form {
+        display: grid;
+        grid-template-columns: 60% auto;
+        column-gap: 32px;
+        margin-top: 46px; }
+        footer form label {
+          margin: 0; }
+        footer form input {
+          padding: 25px; } }

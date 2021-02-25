@@ -1,4 +1,4 @@
-@import './mixins';
+@import "./mixins";
 $pink: hsl(322, 100%, 66%);
 $VeryDarkCyan: hsl(192, 100%, 9%);
 
@@ -10,7 +10,7 @@ footer {
     color: #ffffffda;
 
     .footer_container {
-        background-color:  $VeryDarkCyan;
+        background-color: $VeryDarkCyan;
     }
 
     .footer__heading {
@@ -37,6 +37,7 @@ footer {
     .footer__paragraph {
         margin-top: 32px;
         margin-bottom: 32px;
+        line-height: 33px;
     }
     form {
         width: 100%;
@@ -76,6 +77,11 @@ footer {
             display: none;
         }
     }
+    .contact_container {
+        svg {
+            margin-right: 8px;
+        }
+    }
     .phone_contact {
         margin-bottom: 32px;
     }
@@ -88,11 +94,67 @@ footer {
         padding: 0;
         padding-bottom: 32px;
         li {
-            margin-left: 16px;
+            margin-right: 16px;
             img {
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
             }
         }
+    }
+
+    @media (min-width: 1114px) {
+        background-image: url(../images/bg-footer-top-desktop.svg);
+        padding: 11% 0 0 0;
+
+        .footer_contents_container {
+            @include flex-row;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap; 
+
+            article { 
+                padding: 0;
+            }
+            .news_letter {
+                flex-basis: 50%;
+
+                .footer__paragraph { 
+                    margin-top: 39px;
+                }
+            }
+
+            .huddle_info {
+                flex-basis: 50%;
+                .footer__heading .page__heading-text {
+                    font-size: 48px;
+                    line-height: 59px;
+                }
+            }
+        } 
+        .news_letter h2 { 
+            line-height: 59px;
+        }
+
+        .footer__paragraph {
+            width: 380px;
+            margin-top: 39px;
+        }
+        .footer__paragraph {
+            width: 380px; 
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 60% auto;
+            column-gap: 32px;
+            margin-top: 46px;
+            label {
+                margin: 0;
+            }
+
+            input {
+            padding: 25px;
+        }
+ 
+    }
     }
 }
