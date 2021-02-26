@@ -286,7 +286,8 @@ footer {
   footer h2 {
     color: #ffffffde; }
   footer .huddle_info .footer__heading svg {
-    margin-top: 16px; }
+    margin-top: 16px;
+    transform: translateY(13px); }
   footer .huddle_info .footer__heading .page__heading-text {
     font-size: 24px;
     line-height: 33px; }
