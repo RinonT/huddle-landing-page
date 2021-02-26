@@ -1,5 +1,6 @@
 @import "./mixins";
 $pink: hsl(322, 100%, 66%);
+$lightPinkColor: hsl(322, 100%, 78%);
 $VeryDarkCyan: hsl(192, 100%, 9%);
 
 footer {
@@ -7,7 +8,7 @@ footer {
     background-repeat: no-repeat;
     background-size: contain;
     padding: 13% 0 0 0;
-    color: #ffffffda;
+    color: #ffffffab;
 
     .footer_container {
         background-color: $VeryDarkCyan;
@@ -16,6 +17,11 @@ footer {
     .footer__heading {
         padding-top: 100px;
     }
+
+    h2 {
+        color: #ffffffde;
+    }
+
     .huddle_info {
         .footer__heading {
             svg {
@@ -31,8 +37,7 @@ footer {
         text-transform: uppercase;
     }
     article {
-        text-align: unset;
-        padding: 0 24px;
+        text-align: unset; 
     }
     .footer__paragraph {
         margin-top: 32px;
@@ -64,6 +69,10 @@ footer {
             background-color: $pink;
             color: #ffffff;
             border: transparent;
+        }
+        .subscribe_btn:hover {
+            background-color: $lightPinkColor;
+            opacity: 0.8;
         }
         input,
         .subscribe_btn {

@@ -1,4 +1,6 @@
 @import "./mixins";
+$lightPinkColor: hsl(322, 100%, 78%);
+
 .growth_section {
     background-image: url(../images/bg-section-top-mobile-1.svg);
     background-repeat: no-repeat;
@@ -19,6 +21,7 @@
     background-size: contain;
     position: absolute;
     left: 0;
+    z-index: -1;
 }
 
 .users_section {
@@ -76,6 +79,11 @@
         text-align: center;
         align-items: center;
         padding-top: 0;
+    }
+
+    .start-btn:hover {
+        background-color: $lightPinkColor;
+        opacity: 0.8;
     }
 }
 

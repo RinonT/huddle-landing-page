@@ -1,9 +1,11 @@
 @import "./mixins";
-$lightPinkColor: hsl(321, 100%, 78%);
+$lightPinkColor: hsl(321, 100%, 78%); 
+$lightFadedPinkColor: hsla(321, 100%, 78%, 0.685); 
+
 header {
     .header__container {
         @include flex-row;
-        padding: 32px 6px 0 6px;
+        padding: 32px 18px 0 18px;
         h1 {
             @include flex-row;
             justify-content: unset;
@@ -25,6 +27,11 @@ header {
         -moz-border-radius: 50px;
         -ms-border-radius: 50px;
         -o-border-radius: 50px;
+    }
+
+    .try-btn:hover {
+        border: 0.1px solid $lightFadedPinkColor;
+        color: $lightFadedPinkColor;
     }
 }
 

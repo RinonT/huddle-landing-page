@@ -37,10 +37,13 @@ img {
 }
 
 .contents_container {
+    padding-left: 18px;
+    padding-right: 18px;
     @media(min-width: 1114px) {
         max-width: 1114px;
         margin-left: auto;
         margin-right: auto;
+        padding: 0;
     }
 }
 
